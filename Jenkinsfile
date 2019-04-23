@@ -1,16 +1,13 @@
+@Library('poco-shared-libs')_
+
 pipeline {
     agent any
     
     stages{
         stage("Building"){
             steps{
-               script {
-                   if(isUnix()){
-                    echo "Unix"
-                    } else{
-                        echo "Windows"
-                    }
-               }
+               echo 'Hello World'
+               sayHello 'Steve'
             }
         }
         stage("Testing"){
