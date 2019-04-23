@@ -14,11 +14,8 @@ pipeline {
             }
         }
         stage("Deply"){
-            when {
-                env.IS_UNIX == true
-            }
             steps {
-                echo 'Unix'
+                echo IS_UNIX
             }
         }
         stage("Testing"){
