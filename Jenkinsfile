@@ -3,7 +3,9 @@ import com.poco.GlobalVars
 
 pipeline {
     agent any
-    
+    environment {
+        IS_UNIX = GlobalVars.isUnix
+    }
     stages{
         stage("Building"){
             steps{
@@ -13,7 +15,7 @@ pipeline {
         }
         stage("Deply"){
             when {
-                GlobalVars.isUnix
+                env.IS_UNIX
             }
             steps {
                 echo 'Unix'
