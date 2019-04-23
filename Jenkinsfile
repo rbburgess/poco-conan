@@ -1,4 +1,5 @@
 @Library('poco-shared-libs')_
+import GlobalVars
 
 pipeline {
     agent any
@@ -12,7 +13,7 @@ pipeline {
         }
         stage("Deply"){
             when {
-                isUnixSystem
+                GlobalVars.isUnix
             }
             steps {
                 echo 'Unix'
