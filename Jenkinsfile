@@ -9,7 +9,14 @@ pipeline {
                echo 'Hello World'
                sayHello 'Steve'
             }
-            isUnixSystem
+        }
+        stage("Deply"){
+            when {
+                isUnixSystem
+            }
+            steps {
+                echo 'Unix'
+            }
         }
         stage("Testing"){
             steps{
