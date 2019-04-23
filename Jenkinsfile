@@ -20,7 +20,7 @@ pipeline {
         }
         stage("Testing"){
             steps{
-                echo GlobalVars.foo
+                echo GlobalVars.foo()
             }
         }
     }
