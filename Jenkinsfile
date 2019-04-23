@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage("Building"){
             steps{
-                echo System.properties['os.name'].toLowercase()
+                echo isUnix()
             }
         }
         stage("Testing"){
