@@ -3,7 +3,11 @@ pipeline {
     stages{
         stage("Building"){
             steps{
-                echo isUnix()
+               if(isUnix()){
+                   echo "Unix"
+               } else{
+                   echo "Windows"
+               }
             }
         }
         stage("Testing"){
