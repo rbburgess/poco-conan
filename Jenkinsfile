@@ -4,7 +4,7 @@ import com.poco.GlobalVars
 pipeline {
     agent any
     environment {
-        IS_UNIX = GlobalVars.isUnix()
+        IS_UNIX = 'true'
     }
     stages{
         stage("Building"){
@@ -13,7 +13,7 @@ pipeline {
                sayHello 'Steve'
             }
         }
-        stage("Deply"){
+        stage("Deploy"){
             steps {
                 echo env.IS_UNIX
             }
