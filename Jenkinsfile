@@ -4,7 +4,7 @@ import com.poco.GlobalVars
 pipeline {
     agent any
     environment {
-        IS_UNIX = GlobalVars.isUnixSystem
+        IS_UNIX = GlobalVars.isUnixSystem()
     }
     stages{
         stage("Building"){
