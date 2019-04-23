@@ -1,12 +1,15 @@
 pipeline {
     agent any
+    
     stages{
         stage("Building"){
             steps{
-               if(isUnix()){
-                   echo "Unix"
-               } else{
-                   echo "Windows"
+               script {
+                   if(isUnix()){
+                    echo "Unix"
+                    } else{
+                        echo "Windows"
+                    }
                }
             }
         }
