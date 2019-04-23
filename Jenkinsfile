@@ -7,7 +7,7 @@ pipeline {
         stage("Building"){
             steps{
                echo 'Hello World'
-               mkdir -p build
+               bat 'mkdir -p build'
             }
         }
         stage("Deploy"){
