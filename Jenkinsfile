@@ -8,8 +8,8 @@ pipeline {
             steps{
                echo 'Hello World'
                sayHello 'Steve'
-               isUnixSystem
             }
+            isUnixSystem
         }
         stage("Testing"){
             steps{
