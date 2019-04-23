@@ -15,7 +15,7 @@ pipeline {
         }
         stage("Deply"){
             steps {
-                echo IS_UNIX
+                echo env.IS_UNIX
             }
         }
         stage("Testing"){
