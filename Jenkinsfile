@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage("Building"){
             steps{
-                echo "Building"
+                echo System.properties['os.name'].toLowercase()
             }
         }
         stage("Testing"){
