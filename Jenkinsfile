@@ -15,7 +15,7 @@ pipeline {
         }
         stage("Deply"){
             when {
-                env.IS_UNIX
+                env.IS_UNIX == true
             }
             steps {
                 echo 'Unix'
