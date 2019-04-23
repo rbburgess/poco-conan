@@ -7,7 +7,7 @@ pipeline {
         stage("Building"){
             steps{
                echo 'Hello World'
-               bat 'mkdir -p build'
+               bat 'mkdir build'
                bat 'cd build'
                bat 'conan install ..'
                bat 'cmake .. -G "Visual Studio 15 Win64"'
