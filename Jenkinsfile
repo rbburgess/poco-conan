@@ -1,5 +1,5 @@
 @Library('poco-shared-libs')_
-import GlobalVars
+import com.poco.GlobalVars
 
 pipeline {
     agent any
